@@ -7,8 +7,7 @@ print( data)
 
 inputs = data.iloc[:, 0:2]
 outputs = data.iloc[:, 2]
-print(inputs)
-print(outputs)
+print(inputs, outputs)
 
 inputs["NumRooms"] = inputs["NumRooms"].fillna(inputs["NumRooms"].mean())
 

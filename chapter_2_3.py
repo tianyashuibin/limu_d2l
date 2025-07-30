@@ -1,0 +1,58 @@
+import torch
+import numpy as np
+
+print("------1------")
+x = torch.tensor(3.0)
+y = torch.tensor(2.0)
+print("x + y =", x + y)
+print("x - y =", x - y)
+print("x * y =", x * y)
+print("x / y =", x / y)
+
+print("------2------")
+x = torch.arange(4)
+print("x =", x)
+print("x.shape =", x.shape)
+print("len(x) =", len(x))
+print("x[2] =", x[2])
+
+print("------3------")
+A = torch.arange(20).reshape(5, 4)
+print("A =", A)
+print("A.shape =", A.shape)
+print("len(A) =", len(A))
+print("A[0, 1] =", A[0, 1])
+print("A[0] =", A[0])
+print("A[:, 1] =", A[:, 1])
+print("A[1:3, :] =", A[1:3, :])
+print("A[A < 5] =", A[A < 5])
+A[:, 0] = 0
+print("A =", A)
+
+print("------4------")
+print("A.numpy() =", A.numpy())
+print("A.sum() =", A.sum())
+print("A.sum(axis=0) =", A.sum(axis=0))
+print("A.sum(axis=1) =", A.sum(axis=1))
+print("A.sum(axis=[0, 1]) =", A.sum(axis=[0, 1]))
+print("A.mean() =", A.float().mean())
+print("A.mean(axis=0) =", A.float().mean(axis=0))
+print("A.mean(axis=1) =", A.float().mean(axis=1))
+print("A.mean(axis=[0, 1]) =", A.float().mean(axis=[0, 1]))
+
+print("------5------")
+print("A.prod() =", A.prod())
+print("A.prod(axis=0) =", A.prod(axis=0))
+print("A.prod(axis=1) =", A.prod(axis=1))
+# print("A.prod(axis=[0, 1]) =", A.prod(axis=[0, 1]))
+
+print("------6------")
+print("A.max() =", A.max())
+print("A.max(axis=0) =", A.max(axis=0))
+print("A.max(axis=1) =", A.max(axis=1))
+# print("A.max(axis=[0, 1]) =", A.max(axis=[0, 1]))
+print("A.min() =", A.min())
+print("A.min(axis=0) =", A.min(axis=0))
+
+print("------7------")
+print("A.T", A.T)
